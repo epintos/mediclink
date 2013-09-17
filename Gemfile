@@ -2,37 +2,57 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
 
+gem 'unicorn'
+gem 'kaminari'
+gem 'app_configuration'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :ref => "ca703a2"
+gem 'carrierwave'
+gem 'inherited_resources'
+gem 'cancan'
+gem 'devise', '~> 2.2.4'
+gem "semantic-ui-rails", "~> 0.0.2.1"
+gem 'jquery-rails', '~> 2.2.1'
+gem 'jquery-ui-rails'
+gem 'jquery-fileupload-rails'
+gem 'activeadmin'
+gem "haml-rails"
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :debugging, :test, :development do
+  gem 'pry'
+  gem 'debugger'
+  gem 'debugger-pry'
+  gem 'pry-nav'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+group :test, :development do
+  gem 'timecop'
+  gem 'rspec-rails'
+  gem 'rspec-mocks'
+  gem 'factory_girl_rails', '~>4.1.0'
+  gem 'faker', '~>1.0.1'
+  gem 'cucumber', '1.2.5'
+  gem 'capybara', '>= 2.1.0'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'launchy'
+  gem 'poltergeist'
+  gem 'spork-rails'
+  gem 'email_spec'
+end
+  
