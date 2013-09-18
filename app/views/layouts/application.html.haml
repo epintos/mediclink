@@ -6,4 +6,11 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    - if user_signed_in?
+      %a{href: destroy_user_session_path, method: 'delete' }
+        = t('users.sign_out')
+    - if notice
+      %p.alert.alert-notice= notice
+    - if alert
+      %p.alert.alert-error= alert
     = yield

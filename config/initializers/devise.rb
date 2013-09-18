@@ -76,12 +76,6 @@ Devise.setup do |config|
   # passing :skip => :sessions to `devise_for` in your config/routes.rb
   config.skip_session_storage = [:http_auth]
 
-  # By default, Devise cleans up the CSRF token on authentication to
-  # avoid CSRF token fixation attacks. This means that, when using AJAX
-  # requests for sign in and sign up, you need to get a new CSRF token
-  # from the server. You can disable this option at your own risk.
-  # config.clean_up_csrf_token_on_authentication = true
-
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 10. If
   # using other encryptors, it sets how many times you want the password re-encrypted.
@@ -92,7 +86,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "b426acdd30d279965c4cfc17a5a1f0b5c33a4d4540fc7a97f74282184ecd296610c31fcaef5ab46aa69c583e9eb712dae143b9242d3fcc792b16c263ff50b506"
+  # config.pepper = "961e78142f00d5bd6957e3bb00eeb3114b77590f01d30558c7b0ac71bb287610b975414b79fff41ebf073aecfa447aa0a9c8ea88aa3c9166f983b4c44149a7d9"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -220,7 +214,7 @@ Devise.setup do |config|
   # config.navigational_formats = ["*/*", :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  # config.sign_out_via = :delete
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
