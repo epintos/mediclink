@@ -3,8 +3,11 @@ class Ability
 
   def initialize(user)
     user ||= User.new
-    can :show, User do |u|
-      u == user
+    case user
+      when User
+        can :show, User do |u|
+          u == user
+        end
     end
   end
   
