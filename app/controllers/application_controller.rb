@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     if user_signed_in?
       flash[:error] = "Acceso denegado"
-      redirect_to root_path
+  	  redirect_to root_path
     else
       redirect_to new_user_session_path
     end
