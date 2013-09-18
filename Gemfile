@@ -26,12 +26,13 @@ gem 'carrierwave'
 gem 'inherited_resources'
 gem 'cancan'
 gem 'devise', '~> 2.2.4'
-gem "semantic-ui-rails", "~> 0.0.2.1"
 gem 'jquery-rails', '~> 2.2.1'
 gem 'jquery-ui-rails'
 gem 'jquery-fileupload-rails'
 gem 'activeadmin'
 gem "haml-rails"
+gem 'less-rails'
+gem 'therubyracer'
 
 group :debugging, :test, :development do
   gem 'pry'

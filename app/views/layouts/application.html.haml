@@ -13,4 +13,23 @@
       %p.alert.alert-notice= notice
     - if alert
       %p.alert.alert-error= alert
+    .ui.transparent.green.center.inverted.menu.celled.grid
+      .row
+        %a.active.item.column
+          %i.home.icon
+          Home
+        %a.item.column
+          %i.mail.icon
+          Messages
+        %a.item.column
+          %i.community.icon
+          Browse
+        .four.wide.column.form
+          .ui.action.input.three.column.grid
+            .column
+              %input{placeholder: "Email...", type: "email"}/
+            .column
+              %input{placeholder: "Password...", type: "password"}/
+            .column
+              .ui.button Search
     = yield
