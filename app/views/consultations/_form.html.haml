@@ -1,0 +1,28 @@
+= form_for @consultation, :html => {:multipart => true} do |f|
+  - if @consultation.errors.any?
+    %ul
+      - @consultation.errors.full_messages.each do |msg|
+        %li= msg
+  .control-group
+    = f.label t('consultations.date'),:class=>"control-label"
+    .controls
+      = f.text_field :date
+  .control-group
+    = f.label t('consultations.doctor'),:class=>"control-label"
+    .controls
+      = f.text_field :doctor
+  .control-group
+    = f.label t('consultations.comments'),:class=>"control-label"
+    .controls
+      = f.text_area :comments, size: "25x4"
+  .control-group
+    = f.label t('consultations.file'),:class=>"control-label"
+    .controls
+      = f.file_field :file
+  .control-group
+    .controls
+      - if @consultation.new_record?
+        = f.submit t('consultations.new'),  :class => 'btn btn-primary'
+      - else
+        = f.submit t('consultations.edit'),  :class => 'btn btn-primary'
+= link_to t('back'), :back, class: "btn"

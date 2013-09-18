@@ -1,0 +1,7 @@
+=link_to t('consultations.new'), new_consultation_path
+= @user.full_name
+= @user.age
+= @user.email
+
+- @user.consultations.each do |consultation|
+  = link_to consultation.date, consultation
