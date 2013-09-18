@@ -9,10 +9,13 @@
     - if user_signed_in?
       %a{href: destroy_user_session_path, method: 'delete' }
         = t('users.sign_out')
+      = link_to t('users.profile'), current_user
     - if notice
       %p.alert.alert-notice= notice
     - if alert
       %p.alert.alert-error= alert
+    - if flash[:error]
+      %p.alert.alert-error= flash[:error]
     .ui.transparent.green.center.inverted.menu.celled.grid
       .row
         %a.active.item.column

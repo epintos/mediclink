@@ -9,6 +9,7 @@ class Ability
           u == user
         end
     end
+    can [:create, :new, :edit, :update, :index, :show], Consultation
   end
   
 end
