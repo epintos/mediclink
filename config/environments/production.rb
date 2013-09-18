@@ -20,6 +20,10 @@ Mediclink::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.assets.paths << "#{Rails.root}/vendor/assets/fonts" 
+
+  config.assets.precompile += %w( .svg .eot .woff .ttf )
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
