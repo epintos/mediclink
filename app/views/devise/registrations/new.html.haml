@@ -1,29 +1,29 @@
-%h2 Sign up
+%h2= t('users.sign_up')
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = devise_error_messages!
   %div
-    = f.label :first_name
+    = f.label t('users.first_name')
     %br/
     = f.text_field :first_name, :autofocus => true
   %div
-    = f.label :last_name
+    = f.label t('users.last_name')
     %br/
     = f.text_field :last_name
   %div
-    = f.label :age
+    = f.label t('users.age')
     %br/
     = f.number_field :age, :min => 18
   %div
-    = f.label :email
+    = f.label t('users.email')
     %br/
     = f.email_field :email
   %div
-    = f.label :password
+    = f.label t('users.password')
     %br/
     = f.password_field :password
   %div
-    = f.label :password_confirmation
+    = f.label t('users.password_confirmation')
     %br/
     = f.password_field :password_confirmation
-  %div= f.submit "Sign up"
+  %div= f.submit t('users.sign_up')
 = render "devise/shared/links"

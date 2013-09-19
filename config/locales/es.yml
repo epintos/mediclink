@@ -1,8 +1,22 @@
 #encoding: utf-8
 es:
+  helpers:
+    buttons:
+      back: Atrás
   users:
     sign_out: Salir
     profile: Perfil
+    sign_in: Entrar
+    sign_up: Registrarse
+    age: Edad
+    password: Contraseña
+    password_confirmation: Confirmación Contraseña
+    email: Email
+    first_name: Nombre
+    last_name: Apellido
+    remember_me: Recordarme
+    forgot_password: Olvidaste tu contraseña?
+    edit: Editar Perfil
   consultations:
     new: Nueva Consulta
     comments: Comentarios
@@ -10,6 +24,18 @@ es:
     doctor: Médico
     date: Fecha
     edit: Editar Consulta
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: Contraseña requerida
+              too_short: Contraseña debe ser de mínimo 8 caracteres
+              confirmation: Contraseñas no coinciden
+
+
+
   date:
     abbr_day_names:
     - dom

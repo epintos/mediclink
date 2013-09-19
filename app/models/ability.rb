@@ -5,7 +5,7 @@ class Ability
     user ||= User.new
     case user
       when User
-        can :show, User do |u|
+        can [:show, :edit, :update], User do |u|
           u == user
         end
     end
