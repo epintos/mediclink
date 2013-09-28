@@ -34,6 +34,7 @@ gem 'jquery-ui-rails'
 gem 'jquery-fileupload-rails'
 gem 'activeadmin'
 gem "haml-rails"
+gem 'rails_12factor', group: :production
 
 
 group :debugging, :test, :development do

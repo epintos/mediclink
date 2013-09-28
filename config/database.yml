@@ -57,5 +57,3 @@ production:
   pool: 5
   username: mediclink
   password: mediclink
-  host: localhost
-  port: 5432
