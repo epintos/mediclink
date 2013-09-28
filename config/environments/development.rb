@@ -38,8 +38,4 @@ Mediclink::Application.configure do
   # Devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-  # Fonts
-  config.assets.paths << "#{Rails.root}/vendor/assets/fonts/"
-
-  config.assets.precompile += %w( .svg .eot .woff .ttf )
 end
