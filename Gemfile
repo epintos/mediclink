@@ -16,7 +16,6 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem "therubyracer"
 end
 
 group :development do
@@ -35,7 +34,6 @@ gem 'jquery-fileupload-rails'
 gem 'activeadmin'
 gem "haml-rails"
 gem 'less-rails'
-gem 'therubyracer'
 
 group :debugging, :test, :development do
   gem 'pry'
