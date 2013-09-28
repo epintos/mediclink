@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 
@@ -24,7 +23,7 @@ group :development do
   gem "binding_of_caller"
 end
 
-# gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :ref => "ca703a2"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :ref => "ca703a2"
 gem 'carrierwave'
 gem 'inherited_resources'
 gem 'cancan'
@@ -39,8 +38,8 @@ gem 'therubyracer'
 
 group :debugging, :test, :development do
   gem 'pry'
-  gem 'debugger'
-  gem 'debugger-pry'
+  # gem 'debugger'
+  # gem 'debugger-pry'
   gem 'pry-nav'
 end
 

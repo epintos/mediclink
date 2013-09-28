@@ -12,10 +12,12 @@ es:
     password: Contraseña
     password_confirmation: Confirmación Contraseña
     email: Email
+    full_name: Nombre Completo
     first_name: Nombre
     last_name: Apellido
     remember_me: Recordarme
     forgot_password: Olvidaste tu contraseña?
+    consultations: Consultas
     edit: Editar Perfil
   consultations:
     new: Nueva Consulta
@@ -33,6 +35,14 @@ es:
               blank: Contraseña requerida
               too_short: Contraseña debe ser de mínimo 8 caracteres
               confirmation: Contraseñas no coinciden
+  home:
+    slogan: Mantené tu historial médico ordenado y accedé a él desde cualquier lado.
+    consultations: Consultas médicas
+    consultations_text: Registrá los datos de tus consultas médicas y médicos.
+    emergency_code: Código de emergencia
+    emergency_code_text: "Lleva con vos tu código de seguridad y ante cualquier emergencia, cualquiera podrá ayudarte."
+    stadistics: Estadísticas
+    stadistics_text: Cargá tus análisis y observá gráficos de como fueron evaluciando con el tiempo.
 
 
 

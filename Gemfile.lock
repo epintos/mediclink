@@ -1,8 +1,19 @@
 GIT
   remote: git://github.com/bmabey/database_cleaner.git
-  revision: df55cf7b746e792dba1d11eea0d6e31e3abc7e8c
+  revision: 9be69424dc013b92b52325b90654adedf744be1f
   specs:
     database_cleaner (1.1.1)
+
+GIT
+  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
+  revision: ca703a2349e9a0c26dc5a8a5bb8f5d6dee3b0cff
+  ref: ca703a2
+  specs:
+    twitter-bootstrap-rails (2.1.1)
+      actionpack (>= 3.1)
+      less-rails (~> 2.2.3)
+      railties (>= 3.1)
+      therubyracer (= 0.10.1)
 
 GEM
   remote: https://rubygems.org/
@@ -20,18 +31,17 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
-    activeadmin (0.6.0)
-      arbre (>= 1.0.1)
-      bourbon (>= 1.0.0)
-      devise (>= 1.1.2)
-      fastercsv
-      formtastic (>= 2.0.0)
-      inherited_resources (>= 1.3.1)
-      jquery-rails (>= 1.0.0)
-      kaminari (>= 0.13.0)
-      meta_search (>= 0.9.2)
-      rails (>= 3.0.0)
-      sass (>= 3.1.0)
+    activeadmin (0.6.1)
+      arbre (~> 1.0)
+      bourbon (>= 1.0.0, < 4)
+      devise (>= 1.5.4, < 4)
+      formtastic (~> 2.0)
+      inherited_resources (~> 1.3)
+      jquery-rails (>= 1.0.0, < 3)
+      kaminari (~> 0.13)
+      meta_search (~> 1.0)
+      rails (>= 3.0.0, < 4)
+      sass (~> 3.1)
     activemodel (3.2.13)
       activesupport (= 3.2.13)
       builder (~> 3.0.0)
@@ -72,7 +82,7 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
-    cliver (0.2.1)
+    cliver (0.2.2)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -81,7 +91,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    columnize (0.3.6)
     commonjs (0.2.7)
     cucumber (1.2.5)
       builder (>= 2.1.2)
@@ -94,15 +103,6 @@ GEM
       nokogiri (>= 1.5.0)
       rails (>= 3.0.0)
     debug_inspector (0.0.2)
-    debugger (1.6.1)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
-    debugger-linecache (1.2.0)
-    debugger-pry (0.1.1)
-      debugger (~> 1)
-      pry (>= 0.9.9)
-    debugger-ruby_core_source (1.2.3)
     devise (2.2.7)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -113,7 +113,7 @@ GEM
       launchy (~> 2.1)
       mail (~> 2.2)
     erubis (2.7.0)
-    execjs (2.0.1)
+    execjs (2.0.2)
     factory_girl (4.1.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.1.0)
@@ -121,7 +121,6 @@ GEM
       railties (>= 3.0.0)
     faker (1.0.1)
       i18n (~> 0.4)
-    fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     gherkin (2.11.8)
@@ -148,8 +147,7 @@ GEM
     jquery-rails (2.2.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (4.0.4)
-      jquery-rails
+    jquery-ui-rails (4.0.5)
       railties (>= 3.1.0)
     json (1.8.0)
     kaminari (0.14.1)
@@ -158,12 +156,12 @@ GEM
     kgio (2.8.1)
     launchy (2.3.0)
       addressable (~> 2.3)
-    less (2.4.0)
-      commonjs (~> 0.2.7)
-    less-rails (2.4.2)
+    less (2.2.2)
+      commonjs (~> 0.2.6)
+    less-rails (2.2.6)
       actionpack (>= 3.1)
-      less (~> 2.4.0)
-    libv8 (3.11.8.17)
+      less (~> 2.2.0)
+    libv8 (3.3.10.4)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -220,11 +218,10 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    ref (1.0.5)
-    responders (1.0.0.rc)
+    responders (1.0.0)
       railties (>= 3.2, < 5)
     rspec-core (2.14.5)
-    rspec-expectations (2.14.2)
+    rspec-expectations (2.14.3)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.3)
     rspec-rails (2.14.0)
@@ -234,7 +231,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    sass (3.2.10)
+    sass (3.2.11)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -249,9 +246,8 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
-      ref
+    therubyracer (0.10.1)
+      libv8 (~> 3.3.10)
     thor (0.18.1)
     tilt (1.4.1)
     timecop (0.6.3)
@@ -287,8 +283,6 @@ DEPENDENCIES
   cucumber (= 1.2.5)
   cucumber-rails
   database_cleaner!
-  debugger
-  debugger-pry
   devise (~> 2.2.4)
   email_spec
   factory_girl_rails (~> 4.1.0)
@@ -312,5 +306,6 @@ DEPENDENCIES
   spork-rails
   therubyracer
   timecop
+  twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
   unicorn

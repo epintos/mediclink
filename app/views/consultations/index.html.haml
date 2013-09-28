@@ -1,0 +1,16 @@
+%h1=t('users.consultations')
+%table.table.table-bordered
+  %thead
+    %tr
+      %th= t('consultations.date')
+      %th= t('consultations.doctor')
+      %th= t('consultations.file')
+      %th= t('consultations.comments')
+  %tbody
+    - current_user.consultations.each do |consultation|
+      %tr
+        %td= link_to consultation.date, consultation
+        %td= consultation.doctor
+        %td= consultation.file
+        %td= consultation.comments
+%a.btn.btn-medium.btn-success{href: new_consultation_path}= t('consultations.new')

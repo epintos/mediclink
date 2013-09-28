@@ -28,5 +28,5 @@
     = f.label t('users.password_confirmation')
     %br/
     = f.password_field :password_confirmation
-  %div= f.submit t('users.edit') 
+  %div= f.submit t('users.edit'), class: 'btn btn-medium btn-success'
   = link_to t('helpers.buttons.back'), :back, class: "btn"

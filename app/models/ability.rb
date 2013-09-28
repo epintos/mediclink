@@ -8,8 +8,9 @@ class Ability
         can [:show, :edit, :update], User do |u|
           u == user
         end
+        can [:create, :new, :edit, :update, :index, :show], Consultation
     end
-    can [:create, :new, :edit, :update, :index, :show], Consultation
+    
   end
   
 end

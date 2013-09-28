@@ -6,33 +6,35 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    - if user_signed_in?
-      %a{href: destroy_user_session_path, method: 'delete' }
-        = t('users.sign_out')
-      = link_to t('users.profile'), current_user
-    - if notice
-      %p.alert.alert-notice= notice
-    - if alert
-      %p.alert.alert-error= alert
-    - if flash[:error]
-      %p.alert.alert-error= flash[:error]
-    .ui.transparent.green.center.inverted.menu.celled.grid
-      .row
-        %a.active.item.column
-          %i.home.icon
-          Home
-        %a.item.column
-          %i.mail.icon
-          Messages
-        %a.item.column
-          %i.community.icon
-          Browse
-        .four.wide.column.form
-          .ui.action.input.three.column.grid
-            .column
-              %input{placeholder: "Email...", type: "email"}/
-            .column
-              %input{placeholder: "Password...", type: "password"}/
-            .column
-              .ui.button Search
-    = yield
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "#"} Medic Link
+          .nav-collapse.collapse
+            - if user_signed_in?
+              %ul.nav
+                %li
+                  %a{href: consultations_path}= t('users.consultations')
+                %li
+                  %a{href: user_path(current_user)}= t('users.profile')
+              %ul.nav.pull-right
+                %li
+                  %a{href: destroy_user_session_path, method: 'delete' }
+                    = t('users.sign_out')
+            - else
+              = form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: "navbar-form pull-right"}) do |f|
+                = f.email_field :email, :autofocus => true,  placeholder: "Email", class: "span2"
+                = f.password_field :password, placeholder: "Contraseña", class: "span2"
+                = f.button t('users.sign_in'), class: "btn"
+              
+    - if !user_signed_in?
+      = render 'layouts/index'
+    .container
+      = yield
+      .footer
+        %p © Medic Link 2013
+

@@ -1,4 +1,13 @@
-= @consultation.date
-= @consultation.doctor
-= @consultation.comments
-=link_to t('consultations.edit'), edit_consultation_path(@consultation)
+.row-fluid
+  .span4
+    .hero-unit
+      %dl.dl-horizontal
+        %dt= t('consultations.date')
+        %dd= @consultation.date
+        %dt= t('consultations.doctor')
+        %dd= @consultation.doctor
+        %dt= t('consultations.comments')
+        %dd= @consultation.comments
+.row-fluid
+  %a.btn.btn-medium.btn-success{href: edit_consultation_path(@consultation)}= t('consultations.edit')
+  = link_to t('helpers.buttons.back'), :back, class: "btn"

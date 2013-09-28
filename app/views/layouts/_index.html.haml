@@ -1,0 +1,17 @@
+.container
+  .jumbotron
+    %h1 Medic Link
+    %p.lead= t('home.slogan')
+    %a.btn.btn-large.btn-success{href: new_user_registration_path}= t('users.sign_up')
+  %hr
+  .row-fluid
+    .span4
+      %h2= t('home.consultations')
+      %p= t('home.consultations_text')
+    .span4
+      %h2= t('home.emergency_code')
+      %p= t('home.emergency_code_text')
+    .span4
+      %h2= t('home.stadistics')
+      %p= t('home.stadistics_text')
+  %hr

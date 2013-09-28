@@ -1,8 +1,12 @@
-=link_to t('consultations.new'), new_consultation_path
-=link_to t('users.edit'), edit_user_path(@user)
-= @user.full_name
-= @user.age
-= @user.email
-
-- @user.consultations.each do |consultation|
-  = link_to consultation.date, consultation
+.row-fluid
+  .span4
+    .hero-unit
+      %dl.dl-horizontal
+        %dt= t('users.full_name')
+        %dd= @user.full_name
+        %dt= t('users.email')
+        %dd= @user.email
+        %dt= t('users.age')
+        %dd= @user.age
+.row-fluid
+  %a.btn.btn-medium.btn-success{href: edit_user_path(@user)}= t('users.edit')
