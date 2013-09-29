@@ -5,10 +5,12 @@ class Ability
     user ||= User.new
     case user
       when User
-        can [:show, :edit, :update], User do |u|
+        can [:show, :edit, :update, :regenerate_emergency_token], User do |u|
           u == user
         end
-        can [:create, :new, :edit, :update, :index, :show], Consultation
+        can [:create, :new, :edit, :update, :index, :show], Consultation do |consultation|
+          consultation.user = user
+        end
     end
     
   end

@@ -4,7 +4,11 @@ Mediclink::Application.routes.draw do
     root :to => "users#show"
   end
   root :to => "users#show"
-  resources :users
+  resources :users do
+    member do
+      post :regenerate_emergency_token
+    end
+  end
   resources :consultations
 
 end

@@ -17,6 +17,8 @@ es:
     consultations: Consultas
     consultation: Consulta
     edit: Editar Perfil
+    emergency_token: Código de Emergencia
+    regenerate_emergency_token: Regenerar
   consultations:
     new: Nueva Consulta
     comments: Comentarios
@@ -114,6 +116,7 @@ es:
       update: Actualizar %{model}
     buttons:
       back: Atrás
+      confirm: Estas seguro?
   number:
     currency:
       format:
