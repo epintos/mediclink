@@ -6,6 +6,8 @@
         %dd= l(@consultation.date, :format => :long)
         %dt= t('consultations.doctor')
         %dd= @consultation.doctor
+        %dt= t('consultations.doctor_type')
+        %dd= @consultation.doctor_type
         %dt= t('consultations.comments')
         %dd= @consultation.comments
 .row-fluid

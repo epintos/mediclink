@@ -5,24 +5,25 @@
       - @blood_work.errors.full_messages.each do |msg|
         %li= msg
   .control-group
-    = f.label t('blood_work.colesterol'),:class=>"control-label"
+    = f.label t('blood_works.colesterol'),:class=>"control-label"
     .controls
       = f.text_field :colesterol
   .control-group
-    = f.label t('blood_work.glucose'),:class=>"control-label"
+    = f.label t('blood_works.glucose'),:class=>"control-label"
     .controls
       = f.text_field :glucose
   .control-group
-    = f.label t('blood_work.red_blood_cells'),:class=>"control-label"
+    = f.label t('blood_works.red_blood_cells'),:class=>"control-label"
     .controls
       = f.text_field :red_blood_cells 
   .control-group
-    = f.label t('blood_work.white_blood_cells'),:class=>"control-label"
+    = f.label t('blood_works.white_blood_cells'),:class=>"control-label"
     .controls
-      = f.text_field :white_blood_cells   
+      = f.text_field :white_blood_cells 
+  .control-group
     .controls
       - if @blood_work.new_record?
-        = f.submit t('blood_work.new'),  :class => 'btn btn-medium btn-success'
+        = f.submit t('blood_works.new'),  :class => 'btn btn-medium btn-success'
       - else
-        = f.submit t('blood_work.edit'),  :class => 'btn btn-medium btn-success'
+        = f.submit t('blood_works.edit'),  :class => 'btn btn-medium btn-success'
 = link_to t('helpers.buttons.back'), :back, class: "btn"

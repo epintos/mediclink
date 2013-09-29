@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130929015317) do
+ActiveRecord::Schema.define(:version => 20130929024010) do
 
   create_table "blood_works", :force => true do |t|
     t.float    "colesterol"
@@ -30,9 +30,10 @@ ActiveRecord::Schema.define(:version => 20130929015317) do
     t.string   "comments"
     t.string   "doctor"
     t.string   "file"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.string   "doctor_type"
   end
 
   create_table "users", :force => true do |t|

@@ -1,10 +1,12 @@
-%h1=t('users.consultations')
-.row
+.row-fluid.margin-bottom30
+  %h1=t('users.consultations')
+.row-fluid.margin-bottom30
   %table.table.table-bordered
     %thead
       %tr
         %th= t('consultations.date')
         %th= t('consultations.doctor')
+        %th= t('consultations.doctor_type')
         %th= t('consultations.file')
         %th= t('consultations.comments')
     %tbody
@@ -12,20 +14,34 @@
         %tr
           %td= link_to l(consultation.date, :format => :long), consultation
           %td= consultation.doctor
+          %td= consultation.doctor_type
           - if consultation.file.present?
             %td= link_to t('consultations.download'), consultation.file.url, target: "_blank"
           - else
             %td -
           %td= consultation.comments
   %a.btn.btn-medium.btn-success{href: new_consultation_path}= t('consultations.new')
-.row
-  .span6
-    %div= high_chart("colesterol", @colesterol)
-  .span6
-    %div= high_chart("glucose", @glucose)
-.row
-  .span6
-    %div= high_chart("red_blood_cells", @red_blood_cells)
-  .span6
-    %div= high_chart("white_blood_cells", @white_blood_cells)
-  %a.btn.btn-medium.btn-success{href: new_blood_work_path}= t('blood_work.new')
+
+.row-fluid.margin-bottom30
+  %h1=t('users.blood_work')
+.row-fluid
+  %ul#blook_works.nav.nav-tabs
+    %li.active
+      %a{"data-toggle" => "tab", :href => "#colesterol"}= t('blood_works.colesterol')
+    %li
+      %a{"data-toggle" => "tab", :href => "#glucose"}= t('blood_works.glucose')
+    %li
+      %a{"data-toggle" => "tab", :href => "#red_blood_cells"}= t('blood_works.red_blood_cells')
+    %li
+      %a{"data-toggle" => "tab", :href => "#white_blood_cells"}= t('blood_works.white_blood_cells')
+  #blook_works.tab-content
+    #colesterol.tab-pane.fade.in.active
+      = high_chart("colesterol", @colesterol)
+    #glucose.tab-pane.fade
+      = high_chart("glucose", @glucose)
+    #red_blood_cells.tab-pane.fade
+      = high_chart("red_blood_cells", @red_blood_cells)
+    #white_blood_cells.tab-pane.fade
+      = high_chart("white_blood_cells", @white_blood_cells)
+.row-fluid
+  %a.btn.btn-medium.btn-success{href: new_blood_work_path}= t('blood_works.new')

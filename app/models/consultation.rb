@@ -4,5 +4,5 @@ class Consultation < ActiveRecord::Base
 
   mount_uploader :file, FileUploader
 
-  attr_accessible :comments, :date, :doctor, :file
+  attr_accessible :comments, :date, :doctor, :file, :doctor_type
 end

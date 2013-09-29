@@ -34,16 +34,18 @@ es:
     file_preview: Vista Previa
     file_change: Cambiar Archivo
     doctor: Médico
+    doctor_type: Especilidad Médico
     date: Fecha
     edit: Editar Consulta
     download: Descargar
-  blood_work:
+  blood_works:
     new: Agregar datos
     edit: Editar
     colesterol: Colesterol
     glucose: Glucosa
     red_blood_cells: Glóbulos Rojos
     white_blood_cells: Glóbulos Blancos
+    units: "Cantidad (unidad %{unit})"
   errors:
     messages:
       extension_white_list_error: Formato de archivo inválido

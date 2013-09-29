@@ -13,6 +13,10 @@
     .controls
       = f.text_field :doctor
   .control-group
+    = f.label t('consultations.doctor_type'),:class=>"control-label"
+    .controls
+      = f.text_field :doctor_type
+  .control-group
     = f.label t('consultations.comments'),:class=>"control-label"
     .controls
       = f.text_area :comments, size: "25x4"
