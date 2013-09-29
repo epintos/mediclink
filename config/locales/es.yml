@@ -1,8 +1,5 @@
 #encoding: utf-8
 es:
-  helpers:
-    buttons:
-      back: Atrás
   users:
     sign_out: Salir
     profile: Perfil
@@ -18,14 +15,22 @@ es:
     remember_me: Recordarme
     forgot_password: Olvidaste tu contraseña?
     consultations: Consultas
+    consultation: Consulta
     edit: Editar Perfil
   consultations:
     new: Nueva Consulta
     comments: Comentarios
     file: Archivo
+    file_preview: Vista Previa
+    file_change: Cambiar Archivo
     doctor: Médico
     date: Fecha
     edit: Editar Consulta
+    download: Descargar
+  errors:
+    messages:
+      extension_white_list_error: Formato de archivo inválido
+      not_saved: Hubo un problema
   activerecord:
     errors:
       models:
@@ -35,14 +40,16 @@ es:
               blank: Contraseña requerida
               too_short: Contraseña debe ser de mínimo 8 caracteres
               confirmation: Contraseñas no coinciden
+            email:
+              blank: Email requerido
   home:
     slogan: Mantené tu historial médico ordenado y accedé a él desde cualquier lado.
     consultations: Consultas médicas
-    consultations_text: Registrá los datos de tus consultas médicas y médicos.
+    consultations_text: "Subí los datos de tus últimas consultas médicas. Datos de los médicos que te atendieron, lugares y datos relevantes."
     emergency_code: Código de emergencia
-    emergency_code_text: "Lleva con vos tu código de seguridad y ante cualquier emergencia, cualquiera podrá ayudarte."
+    emergency_code_text: "Lleva con vos tu código de seguridad y ante cualquier emergencia, cualquiera podrá acceder a los datos que consideres de gran importancia ante una emergencia."
     stadistics: Estadísticas
-    stadistics_text: Cargá tus análisis y observá gráficos de como fueron evaluciando con el tiempo.
+    stadistics_text: Subí los datos de tus diferentes análisis y observá gráficos de como fueron cambiando a lo largo del tiempo.
 
 
 
@@ -105,6 +112,8 @@ es:
       create: Crear %{model}
       submit: Guardar %{model}
       update: Actualizar %{model}
+    buttons:
+      back: Atrás
   number:
     currency:
       format:

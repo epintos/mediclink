@@ -1,4 +1,5 @@
-= form_for @consultation, :html => {:multipart => true} do |f|
+%h2= t('users.consultation')
+= form_for @consultation, :html => {:multipart => true, class: 'form-horizontal'} do |f|
   - if @consultation.errors.any?
     %ul
       - @consultation.errors.full_messages.each do |msg|
@@ -15,14 +16,24 @@
     = f.label t('consultations.comments'),:class=>"control-label"
     .controls
       = f.text_area :comments, size: "25x4"
-  .control-group
-    = f.label t('consultations.file'),:class=>"control-label"
-    .controls
-      = f.file_field :file
+  - if @consultation.file.present?
+    .control-group
+      = f.label t('consultations.file_preview'),:class=>"control-label"
+      .controls
+        = link_to t('consultations.download'), @consultation.file.url, target: "_blank"
+    .control-group
+      = f.label t('consultations.file_change'),:class=>"control-label"
+      .controls
+        = f.file_field :file
+  - else
+    .control-group
+      = f.label t('consultations.file'),:class=>"control-label"
+      .controls
+        = f.file_field :file
   .control-group
     .controls
       - if @consultation.new_record?
-        = f.submit t('consultations.new'),  :class => 'btn btn-primary'
+        = f.submit t('consultations.new'),  :class => 'btn btn-medium btn-success'
       - else
-        = f.submit t('consultations.edit'),  :class => 'btn btn-primary'
+        = f.submit t('consultations.edit'),  :class => 'btn btn-medium btn-success'
 = link_to t('helpers.buttons.back'), :back, class: "btn"

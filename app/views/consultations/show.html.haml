@@ -3,7 +3,7 @@
     .hero-unit
       %dl.dl-horizontal
         %dt= t('consultations.date')
-        %dd= @consultation.date
+        %dd= l(@consultation.date, :format => :long)
         %dt= t('consultations.doctor')
         %dd= @consultation.doctor
         %dt= t('consultations.comments')

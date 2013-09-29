@@ -9,8 +9,11 @@
   %tbody
     - current_user.consultations.each do |consultation|
       %tr
-        %td= link_to consultation.date, consultation
+        %td= link_to l(consultation.date, :format => :long), consultation
         %td= consultation.doctor
-        %td= consultation.file
+        - if consultation.file.present?
+          %td= link_to t('consultations.download'), consultation.file.url, target: "_blank"
+        - else
+          %td -
         %td= consultation.comments
 %a.btn.btn-medium.btn-success{href: new_consultation_path}= t('consultations.new')
