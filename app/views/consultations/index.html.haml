@@ -37,11 +37,11 @@
   #blook_works.tab-content
     #colesterol.tab-pane.fade.in.active
       = high_chart("colesterol", @colesterol)
-    #glucose.tab-pane.fade
+    #glucose.tab-pane.fade.full-width
       = high_chart("glucose", @glucose)
-    #red_blood_cells.tab-pane.fade
+    #red_blood_cells.tab-pane.fade.full-width
       = high_chart("red_blood_cells", @red_blood_cells)
-    #white_blood_cells.tab-pane.fade
+    #white_blood_cells.tab-pane.fade.full-width
       = high_chart("white_blood_cells", @white_blood_cells)
 .row-fluid
   %a.btn.btn-medium.btn-success{href: new_blood_work_path}= t('blood_works.new')
