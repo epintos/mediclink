@@ -1,0 +1,28 @@
+%h2= t('users.blood_work')
+= form_for @blood_work, :html => {:multipart => true, class: 'form-horizontal'} do |f|
+  - if @blood_work.errors.any?
+    %ul
+      - @blood_work.errors.full_messages.each do |msg|
+        %li= msg
+  .control-group
+    = f.label t('blood_work.colesterol'),:class=>"control-label"
+    .controls
+      = f.text_field :colesterol
+  .control-group
+    = f.label t('blood_work.glucose'),:class=>"control-label"
+    .controls
+      = f.text_field :glucose
+  .control-group
+    = f.label t('blood_work.red_blood_cells'),:class=>"control-label"
+    .controls
+      = f.text_field :red_blood_cells 
+  .control-group
+    = f.label t('blood_work.white_blood_cells'),:class=>"control-label"
+    .controls
+      = f.text_field :white_blood_cells   
+    .controls
+      - if @blood_work.new_record?
+        = f.submit t('blood_work.new'),  :class => 'btn btn-medium btn-success'
+      - else
+        = f.submit t('blood_work.edit'),  :class => 'btn btn-medium btn-success'
+= link_to t('helpers.buttons.back'), :back, class: "btn"

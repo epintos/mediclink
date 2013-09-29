@@ -17,6 +17,7 @@ es:
     consultations: Consultas
     consultation: Consulta
     edit: Editar Perfil
+    blood_work: Análisis de Sangre
   consultations:
     new: Nueva Consulta
     comments: Comentarios
@@ -27,6 +28,13 @@ es:
     date: Fecha
     edit: Editar Consulta
     download: Descargar
+  blood_work:
+    new: Agregar datos
+    edit: Editar
+    colesterol: Colesterol
+    glucose: Glucosa
+    red_blood_cells: Glóbulos Rojos
+    white_blood_cells: Glóbulos Blancos
   errors:
     messages:
       extension_white_list_error: Formato de archivo inválido

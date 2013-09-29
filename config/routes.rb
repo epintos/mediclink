@@ -5,6 +5,6 @@ Mediclink::Application.routes.draw do
   end
   root :to => "users#show"
   resources :users
-  resources :consultations
+  resources :consultations, :blood_works
 
 end

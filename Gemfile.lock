@@ -134,6 +134,7 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
+    hash-deep-merge (0.1.1)
     hike (1.2.3)
     i18n (0.6.1)
     inherited_resources (1.4.1)
@@ -155,6 +156,9 @@ GEM
     kgio (2.8.1)
     launchy (2.3.0)
       addressable (~> 2.3)
+    lazy_high_charts (1.4.3)
+      bundler (>= 1.0)
+      hash-deep-merge
     less (2.2.2)
       commonjs (~> 0.2.6)
     less-rails (2.2.6)
@@ -298,6 +302,7 @@ DEPENDENCIES
   jquery-ui-rails
   kaminari
   launchy
+  lazy_high_charts
   less-rails
   pg
   poltergeist

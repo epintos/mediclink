@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130918023507) do
+ActiveRecord::Schema.define(:version => 20130929015317) do
+
+  create_table "blood_analyses", :force => true do |t|
+    t.float    "colesterol"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
+
+  create_table "blood_works", :force => true do |t|
+    t.float    "colesterol"
+    t.integer  "user_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.float    "glucose"
+    t.float    "red_blood_cells"
+    t.float    "white_blood_cells"
+  end
+
+  add_index "blood_works", ["user_id"], :name => "index_blood_works_on_user_id"
 
   create_table "consultations", :force => true do |t|
     t.datetime "date"

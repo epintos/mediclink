@@ -9,6 +9,7 @@ class Ability
           u == user
         end
         can [:create, :new, :edit, :update, :index, :show], Consultation
+        can [:create, :new, :edit, :update, :index, :show], BloodWork
     end
     
   end

@@ -1,19 +1,31 @@
 %h1=t('users.consultations')
-%table.table.table-bordered
-  %thead
-    %tr
-      %th= t('consultations.date')
-      %th= t('consultations.doctor')
-      %th= t('consultations.file')
-      %th= t('consultations.comments')
-  %tbody
-    - current_user.consultations.each do |consultation|
+.row
+  %table.table.table-bordered
+    %thead
       %tr
-        %td= link_to l(consultation.date, :format => :long), consultation
-        %td= consultation.doctor
-        - if consultation.file.present?
-          %td= link_to t('consultations.download'), consultation.file.url, target: "_blank"
-        - else
-          %td -
-        %td= consultation.comments
-%a.btn.btn-medium.btn-success{href: new_consultation_path}= t('consultations.new')
+        %th= t('consultations.date')
+        %th= t('consultations.doctor')
+        %th= t('consultations.file')
+        %th= t('consultations.comments')
+    %tbody
+      - current_user.consultations.each do |consultation|
+        %tr
+          %td= link_to l(consultation.date, :format => :long), consultation
+          %td= consultation.doctor
+          - if consultation.file.present?
+            %td= link_to t('consultations.download'), consultation.file.url, target: "_blank"
+          - else
+            %td -
+          %td= consultation.comments
+  %a.btn.btn-medium.btn-success{href: new_consultation_path}= t('consultations.new')
+.row
+  .span6
+    %div= high_chart("colesterol", @colesterol)
+  .span6
+    %div= high_chart("glucose", @glucose)
+.row
+  .span6
+    %div= high_chart("red_blood_cells", @red_blood_cells)
+  .span6
+    %div= high_chart("white_blood_cells", @white_blood_cells)
+  %a.btn.btn-medium.btn-success{href: new_blood_work_path}= t('blood_work.new')
