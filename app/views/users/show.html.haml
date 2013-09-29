@@ -8,8 +8,8 @@
         %dd= @user.full_name
         %dt= t('users.email')
         %dd= @user.email
-        %dt= t('users.age')
-        %dd= @user.age
+        %dt= t('users.birth_date')
+        %dd= l(@user.birth_date, :format => :short)
         %dt= t('users.emergency_token')
         %dd= @user.emergency_token
         %dd

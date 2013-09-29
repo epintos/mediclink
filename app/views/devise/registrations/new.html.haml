@@ -10,9 +10,9 @@
     .controls
       = f.text_field :last_name
   .control-group
-    = f.label t('users.age'), class: 'control-label'
+    = f.label t('users.birth_date'), class: 'control-label'
     .controls
-      = f.number_field :age, :min => 18
+      = f.text_field :birth_date, class: 'datepicker'
   .control-group
     = f.label t('users.email'), class: 'control-label'
     .controls

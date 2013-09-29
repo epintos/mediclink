@@ -13,6 +13,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require bootstrap-datepicker
+//= require loadjs
 //= require highcharts/highcharts                                                           
 //= require highcharts/highcharts-more                                                         
 //= require_tree .
+
+load({
+      controllers: {
+        consultations: [],
+        users: [],
+        registrations: []
+      }
+}, function (controller, action) {
+ $('.datepicker').datepicker({
+  format: "dd/mm/yyyy",
+  autoclose: true,
+  language: "es"
+ });
+});

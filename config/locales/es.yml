@@ -6,7 +6,7 @@ es:
     profile: Perfil
     sign_in: Entrar
     sign_up: Registrarse
-    age: Edad
+    birth_date: Fecha de Nacimiento
     password: Contraseña
     password_confirmation: Confirmación Contraseña
     email: Email
