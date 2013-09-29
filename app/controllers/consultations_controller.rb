@@ -29,6 +29,7 @@ class ConsultationsController < InheritedResources::Base
       @glucose = LazyHighCharts::HighChart.new('blood_work') do |f|
         f.title({ :text=>"Glucosa"})
         f.options[:xAxis][:categories] = blood_works.map { |bw| I18n.l(bw.created_at, format: :short) }
+        f.options[:yAxis][:title][:text] = "Cantidad (unidad mg/dl)"
         f.series(:type=> 'spline', name: 'Glucosa', data: blood_works.map { |bw| bw.glucose })
       end
     end

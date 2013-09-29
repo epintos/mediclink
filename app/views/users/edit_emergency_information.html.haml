@@ -1,0 +1,25 @@
+%h2= t('users.emergency_information')
+.row-fluid
+  .span7
+    .alert.alert-success= t('users.emergency_information_alert')
+= form_for @user, url: update_emergency_information_user_path, method: :post, html:{class:'form-horizontal'} do |f|
+  - if @user.errors.any?
+    %ul
+      - @user.errors.full_messages.each do |msg|
+        %li= msg
+  .control-group
+    = f.label t('users.phone'), class: 'control-label'
+    .controls
+      = f.text_field :phone, :autofocus => true
+  .control-group
+    = f.label t('users.blood_type'), class: 'control-label'
+    .controls
+      = f.text_field :blood_type
+  .control-group
+    = f.label t('users.observations'), class: 'control-label'
+    .controls
+      = f.text_area :observations, size: "25x4"
+  .control-group
+    .controls
+      = f.submit t('users.edit_emergency_information'), class: 'btn btn-medium btn-success'
+= link_to t('helpers.buttons.back'), :back, class: "btn"

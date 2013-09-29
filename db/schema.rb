@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130929015317) do
 
-  create_table "blood_analyses", :force => true do |t|
-    t.float    "colesterol"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "user_id"
-  end
-
   create_table "blood_works", :force => true do |t|
     t.float    "colesterol"
     t.integer  "user_id"
@@ -58,6 +51,10 @@ ActiveRecord::Schema.define(:version => 20130929015317) do
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "age"
+    t.string   "emergency_token"
+    t.string   "blood_type"
+    t.string   "phone"
+    t.string   "observations"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

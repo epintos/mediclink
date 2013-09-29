@@ -1,6 +1,7 @@
 #encoding: utf-8
 es:
   users:
+    information: "Datos de %{user}"
     sign_out: Salir
     profile: Perfil
     sign_in: Entrar
@@ -18,6 +19,14 @@ es:
     consultation: Consulta
     edit: Editar Perfil
     blood_work: Análisis de Sangre
+    emergency_token: Código de Emergencia
+    regenerate_emergency_token: Regenerar
+    emergency_information: Datos de Emergencia
+    emergency_information_alert: Los siguientes datos podrán ser vistos por cualquiera que ingrese tu código de emergencia
+    edit_emergency_information: Editar Datos de Emergencia
+    phone: Teléfono
+    blood_type: Tipo Sanguineo
+    observations: Observaciones
   consultations:
     new: Nueva Consulta
     comments: Comentarios
@@ -122,6 +131,7 @@ es:
       update: Actualizar %{model}
     buttons:
       back: Atrás
+      confirm: Estas seguro?
   number:
     currency:
       format:

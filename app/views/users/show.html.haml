@@ -1,5 +1,7 @@
+.row-fluid.margin-bottom30
+  %h1= t('users.information', user: @user.full_name)
 .row-fluid
-  .span4
+  .span6
     .hero-unit
       %dl.dl-horizontal
         %dt= t('users.full_name')
@@ -8,5 +10,27 @@
         %dd= @user.email
         %dt= t('users.age')
         %dd= @user.age
+        %dt= t('users.emergency_token')
+        %dd= @user.emergency_token
+        %dd
+          = link_to t('users.regenerate_emergency_token'), regenerate_emergency_token_user_path(@user), confirm: t('helpers.buttons.confirm'), class: "btn btn-mini btn-danger", "data-method"=>"post"
+.row-fluid.margin-bottom30
+  = link_to t('users.edit'), edit_user_path(@user), class: "btn btn-medium btn-success"
+
+.row-fluid.margin-bottom30
+  %h1= t('users.emergency_information')
 .row-fluid
-  %a.btn.btn-medium.btn-success{href: edit_user_path(@user)}= t('users.edit')
+  .span7
+    .alert.alert-success= t('users.emergency_information_alert')
+.row-fluid
+  .span6
+    .hero-unit
+      %dl.dl-horizontal
+        %dt= t('users.phone')
+        %dd= @user.phone
+        %dt= t('users.blood_type')
+        %dd= @user.blood_type
+        %dt= t('users.observations')
+        %dd= @user.observations
+.row-fluid
+  = link_to t('users.edit_emergency_information'), edit_emergency_information_user_path(@user), class: "btn btn-medium btn-success"
