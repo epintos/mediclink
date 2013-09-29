@@ -61,6 +61,7 @@ es:
               confirmation: Contraseñas no coinciden
             email:
               blank: Email requerido
+              taken: Email existente
   home:
     slogan: Mantené tu historial médico ordenado y accedé a él desde cualquier lado.
     consultations: Consultas médicas
