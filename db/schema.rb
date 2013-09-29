@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130929024010) do
+ActiveRecord::Schema.define(:version => 20130929152518) do
 
   create_table "blood_works", :force => true do |t|
     t.float    "colesterol"
@@ -51,11 +51,11 @@ ActiveRecord::Schema.define(:version => 20130929024010) do
     t.datetime "updated_at",                             :null => false
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "age"
     t.string   "emergency_token"
     t.string   "blood_type"
     t.string   "phone"
     t.string   "observations"
+    t.datetime "birth_date"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -8,10 +8,14 @@ class Ability
         can [:show, :edit, :update, :regenerate_emergency_token, :edit_emergency_information, :update_emergency_information], User do |u|
           u == user
         end
-        can [:create, :new, :edit, :update, :index, :show], BloodWork
-        can [:create, :new, :edit, :update, :index, :show], Consultation do |consultation|
-          consultation.user = user
+        can [:edit, :update, :show], BloodWork do |blood_work|
+          blood_work.user == user
         end
+        can [:create, :new, :index], BloodWork
+        can [:edit, :update, :show], Consultation do |consultation|
+          consultation.user == user
+        end
+        can [:create, :new, :index], Consultation
     end
     
   end

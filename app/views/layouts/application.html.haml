@@ -13,7 +13,7 @@
 
       ga('create', 'UA-44438239-1', 'mediclink.herokuapp.com');
       ga('send', 'pageview');
-  %body
+  %body{"data-action" => controller.action_name, "data-controller" => controller.controller_name}
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
         .container

@@ -36,6 +36,8 @@ gem 'jquery-fileupload-rails'
 gem 'activeadmin'
 gem "haml-rails"
 gem 'rails_12factor', group: :production
+gem 'bootstrap-datepicker-rails'
+gem 'loadjs'
 
 
 group :debugging, :test, :development do
