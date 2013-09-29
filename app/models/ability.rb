@@ -16,6 +16,7 @@ class Ability
           consultation.user == user
         end
         can [:create, :new, :index], Consultation
+        can [:view_emergency_information], User
     end
     
   end

@@ -1,0 +1,13 @@
+- if @user.valid?
+  .row-fluid.margin-bottom30
+    %h1= t('users.emergency_information')
+  .row-fluid
+    .span6
+      .hero-unit
+        %dl.dl-horizontal
+          %dt= t('users.phone')
+          %dd= @user.phone
+          %dt= t('users.blood_type')
+          %dd= @user.blood_type
+          %dt= t('users.observations')
+          %dd= @user.observations

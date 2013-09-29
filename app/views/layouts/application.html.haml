@@ -38,11 +38,22 @@
                   %a{href: destroy_user_session_path, method: 'delete' }
                     = t('users.sign_out')
             - else
-              = form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: "navbar-form pull-right"}) do |f|
-                = f.email_field :email, :autofocus => true,  placeholder: t('users.email'), class: "span2"
-                = f.password_field :password, placeholder: t('users.password'), class: "span2"
-                = f.button t('users.sign_in'), class: "btn"
-              
+              %ul.nav
+                %li.dropdown
+                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    = t('users.emergency_token')
+                    %b.caret
+                  %ul.dropdown-menu{"style"=> "padding: 15px; padding-bottom: 0px;"}
+                    %li
+                      = form_tag view_emergency_information_path, method: "get", class: "form-inline" do
+                        = text_field_tag :emergency_token, nil, placeholder: t('users.emergency_token'), class: 'input-medium'
+                        = submit_tag t('users.sign_in'), class: "btn btn-danger"
+              - if controller.action_name != "view_emergency_information_path"
+                = form_for(@user, :as => @user, :url => session_path(@user), html: { class: "navbar-form pull-right", id: "user_login"}) do |f|
+                  = f.email_field :email, :autofocus => true,  placeholder: t('users.email'), class: "span2"
+                  = f.password_field :password, placeholder: t('users.password'), class: "span2"
+                  = f.button t('users.sign_in'), class: "btn"
+                
     - if !user_signed_in?
       = render 'layouts/index'
     .container

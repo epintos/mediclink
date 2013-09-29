@@ -1,12 +1,18 @@
 
 .container
   .jumbotron
+    - if flash[:notice]
+      .alert.alert-success= flash[:notice]
+    - if flash[:error]
+      .alert.alert-error= flash[:error]
+    - if flash[:alert]
+      .alert.alert-warning= flash[:alert]
     .alert.alert-success= t('home.alert')
     %h1 Medic Link
     %p.lead= t('home.slogan')
     %a.btn.btn-large.btn-success{href: new_user_registration_path}= t('users.sign_up')
   %hr
-  - if controller.controller_name != "registrations"
+  - if controller.controller_name != "registrations" && (controller.controller_name != "users" && controller.action_name != "view_emergency_information")
     .row-fluid
       .span4
         %h2= t('home.consultations')

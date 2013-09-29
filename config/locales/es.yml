@@ -62,6 +62,7 @@ es:
             email:
               blank: Email requerido
               taken: Email existente
+            emergency_token_invalid: Código de Emergencia inválido
   home:
     slogan: Mantené tu historial médico ordenado y accedé a él desde cualquier lado.
     consultations: Consultas médicas

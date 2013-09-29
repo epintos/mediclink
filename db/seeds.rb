@@ -3,7 +3,8 @@
 case Rails.env
 when "development"
 	
-  user = User.create(email: 'user@example.com', password: 'password', password_confirmation: 'password', first_name: 'Pepe', last_name: 'Santos', birth_date: '12/12/1990')
+  user = User.create(email: 'user@example.com', password: 'password', password_confirmation: 'password', first_name: 'Pepe',
+         last_name: 'Santos', birth_date: '12/12/1990', phone: '123-123', blood_type: '0+', observations: 'Allergic')
   BloodWork.create(colesterol: 150, glucose: 120, red_blood_cells: 100, white_blood_cells: 110, user: user, created_at: Time.now + 1.month) 
   BloodWork.create(colesterol: 130, glucose: 130, red_blood_cells: 110, white_blood_cells: 110, user: user, created_at: Time.now + 3.month) 
   BloodWork.create(colesterol: 140, glucose: 135, red_blood_cells: 100, white_blood_cells: 110, user: user, created_at: Time.now + 6.month) 

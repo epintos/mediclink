@@ -16,5 +16,6 @@ Mediclink::Application.routes.draw do
   end
   
   resources :consultations
+  match "view_emergency_information" => "users#view_emergency_information", :via => :get
 
 end
