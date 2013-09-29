@@ -7,8 +7,11 @@ Mediclink::Application.routes.draw do
   resources :users do
     member do
       post :regenerate_emergency_token
+      post :update_emergency_information
+      get :edit_emergency_information
     end
   end
+  
   resources :consultations
 
 end

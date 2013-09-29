@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :consultations
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :age, :emergency_token
+  attr_accessible :blood_type, :phone, :observations
 
   before_create :generate_emergency_token
 

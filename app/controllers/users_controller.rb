@@ -8,4 +8,13 @@ class UsersController < ApplicationController
     @current_user.save!
     redirect_to @current_user
   end
+
+  def edit_emergency_information
+    @user = @current_user
+  end
+
+  def update_emergency_information
+    @current_user.update_attributes(params[:user])
+    redirect_to @current_user
+  end
 end
