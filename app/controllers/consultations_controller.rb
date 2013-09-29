@@ -17,7 +17,7 @@ class ConsultationsController < InheritedResources::Base
 
   private
     def colesterol_chart(blood_works)
-      @colesterol = LazyHighCharts::HighChart.new('blood_work') do |f|
+      @colesterol = LazyHighCharts::HighChart.new('colesterol') do |f|
         f.title({ :text=> I18n.t('blood_works.colesterol')})
         f.options[:xAxis][:categories] = blood_works.map { |bw| I18n.l(bw.created_at, format: :short) }
         f.options[:yAxis][:title][:text] = I18n.t('blood_works.units', unit: "mg/dl")
@@ -26,7 +26,7 @@ class ConsultationsController < InheritedResources::Base
     end
 
     def glucose_chart(blood_works)
-      @glucose = LazyHighCharts::HighChart.new('blood_work') do |f|
+      @glucose = LazyHighCharts::HighChart.new('glucose') do |f|
         f.title({ :text=> I18n.t('blood_works.glucose')})
         f.options[:xAxis][:categories] = blood_works.map { |bw| I18n.l(bw.created_at, format: :short) }
         f.options[:yAxis][:title][:text] = I18n.t('blood_works.units', unit: "mg/dl")
@@ -35,7 +35,7 @@ class ConsultationsController < InheritedResources::Base
     end
 
     def red_blood_cells_chart(blood_works)
-      @red_blood_cells = LazyHighCharts::HighChart.new('blood_work') do |f|
+      @red_blood_cells = LazyHighCharts::HighChart.new('red_blood_cells') do |f|
         f.title({ :text=> I18n.t('blood_works.red_blood_cells')})
         f.options[:xAxis][:categories] = blood_works.map { |bw| I18n.l(bw.created_at, format: :short) }
         f.options[:yAxis][:title][:text] = I18n.t('blood_works.units', unit: "e12/L")
@@ -44,7 +44,7 @@ class ConsultationsController < InheritedResources::Base
     end
 
     def white_blood_cells_chart(blood_works)
-      @white_blood_cells = LazyHighCharts::HighChart.new('blood_work') do |f|
+      @white_blood_cells = LazyHighCharts::HighChart.new('white_blood_cells') do |f|
         f.title({ :text=> I18n.t('blood_works.white_blood_cells')})
         f.options[:xAxis][:categories] = blood_works.map { |bw| I18n.l(bw.created_at, format: :short) }
         f.options[:yAxis][:title][:text] = I18n.t('blood_works.units', unit: "e9/L")
