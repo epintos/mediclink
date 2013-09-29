@@ -69,6 +69,12 @@ es:
     emergency_code_text: "Lleva con vos tu código de seguridad y ante cualquier emergencia, cualquiera podrá acceder a los datos que consideres de gran importancia ante una emergencia."
     stadistics: Estadísticas
     stadistics_text: Subí los datos de tus diferentes análisis y observá gráficos de como fueron cambiando a lo largo del tiempo.
+    family: Cuida a tu Familia
+    family_text: Accedé a las historias médicas de la gente que te importa y no te olvides de nada de lo que les pase.
+    doctors: Recordá tus médicos
+    doctors_text: "No te olvides de los médicos que te atendieron. Mantené ordenada la información de aquellos que te atendieron, sus números de teléfono, disponibilidad e email."
+    medicine: No te olvides tus medicamentos
+    medicine_text: "No te olvides los medicamentos que te fueron recetados y cuando tenés que tomarlos, la dosis y la frecuencia"
     alert: Medic Link se encuentra en versión beta
 
 

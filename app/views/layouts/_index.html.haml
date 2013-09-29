@@ -6,17 +6,32 @@
     %p.lead= t('home.slogan')
     %a.btn.btn-large.btn-success{href: new_user_registration_path}= t('users.sign_up')
   %hr
-  .row-fluid
-    .span4
-      %h2= t('home.consultations')
-      %p= t('home.consultations_text')
-      = image_tag "article_32x32.png" , class: 'index-img'
-    .span4
-      %h2= t('home.emergency_code')
-      %p= t('home.emergency_code_text')
-      = image_tag "eye_32x24.png", class: 'index-img'
-    .span4
-      %h2= t('home.stadistics')
-      %p= t('home.stadistics_text')
-      = image_tag "chart_32x32.png", class: 'index-img'
-  %hr
+  - if controller.controller_name != "registrations"
+    .row-fluid
+      .span4
+        %h2= t('home.consultations')
+        %p= t('home.consultations_text')
+        = image_tag "article_32x32.png" , class: 'index-img'
+      .span4
+        %h2= t('home.emergency_code')
+        %p= t('home.emergency_code_text')
+        = image_tag "eye_32x24.png", class: 'index-img'
+      .span4
+        %h2= t('home.stadistics')
+        %p= t('home.stadistics_text')
+        = image_tag "image_32x32.png", class: 'index-img'
+    %hr
+    .row-fluid
+      .span4
+        %h2= t('home.family')
+        %p= t('home.family_text')
+        = image_tag "heart_stroke_32x28.png" , class: 'index-img'
+      .span4
+        %h2= t('home.doctors')
+        %p= t('home.doctors_text')
+        = image_tag "user_24x32.png", class: 'index-img'
+      .span4
+        %h2= t('home.medicine')
+        %p= t('home.medicine_text')
+        = image_tag "eyedropper_32x32.png", class: 'index-img'
+    %hr
