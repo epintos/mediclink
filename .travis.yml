@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 1.9.3
+  - 2.0.0
 
 env:
   - RUBY_GC_MALLOC_LIMIT=90000000 RUBY_FREE_MIN=200000 SECURITY_SECRET_TOKEN=traviscitraviscitraviscitraviscitravisci
