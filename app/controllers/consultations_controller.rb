@@ -2,10 +2,11 @@ class ConsultationsController < InheritedResources::Base
   load_and_authorize_resource
 
   def index
-    @colesterol = ChartDrawer.new(current_user).draw('colesterol')
-    @glucose = ChartDrawer.new(current_user).draw('glucose')
-    @red_blood_cells = ChartDrawer.new(current_user).draw('red_blood_cells')
-    @white_blood_cells = ChartDrawer.new(current_user).draw('white_blood_cells')
+    @blood_works = BloodWork.for(@current_user)
+    @colesterol = ColesterolChartDrawer.new(@blood_works).draw
+    @glucose = GlucoseChartDrawer.new(@blood_works).draw
+    @red_blood_cells = RedBloodCellsChartDrawer.new(@blood_works).draw
+    @white_blood_cells = WhiteBloodCellsChartDrawer.new(@blood_works).draw
   end
 
   def create
