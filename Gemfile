@@ -9,6 +9,7 @@ gem 'unicorn'
 gem 'kaminari'
 gem 'app_configuration'
 gem 'lazy_high_charts'
+gem 'coveralls', require: false
 
 # Gems used only for assets and not required
 # in production environments by default.
