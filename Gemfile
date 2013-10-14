@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '3.2.13'
-ruby '2.0.0'
+ruby '2.0.0', patch: '598'
 gem 'pg'
 
 gem 'unicorn'
